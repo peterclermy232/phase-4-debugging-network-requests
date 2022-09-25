@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   
   def create
     movie = Movie.create(movie_params)
-  render json: movie
+  render json: movie, status: :created
   end
   def index
     movies = Movie.all
